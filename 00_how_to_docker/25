@@ -1,0 +1,1 @@
+sudo docker service create --network=overmind -e OC_USERNAME=mike -e OC_PASSWD=1234 --replicas=2 --name=marines 42school/marine-squad:latest

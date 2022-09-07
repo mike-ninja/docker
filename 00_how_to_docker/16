@@ -1,0 +1,12 @@
+docker run -it --name=Abathur -p 3000:3000 -v /home:/root python:2-slim
+import pip
+pip.main(['install','flask'])
+
+from flask import Flask
+mike_app = Flask(__name__)
+@mike_app.route('/')
+          def hello_world():
+               return '<h1>Hello World<h1/>'
+
+if __name__ == '__main__':
+          mike_app.run(host='0.0.0.0', port=3000)
